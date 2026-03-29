@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -18,12 +20,35 @@ export default function Hero() {
         <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed animate-fade-up opacity-0 animation-delay-200 text-balance">
           I design the organizational systems that make AI adoption stick.
         </p>
-        <div className="mt-8 flex items-center justify-center gap-3 animate-fade-up opacity-0 animation-delay-300">
+
+        {/* Proof point — visible in the hero */}
+        <p className="mt-6 text-sm text-gray-500 animate-fade-up opacity-0 animation-delay-300">
+          <span className="text-gold font-semibold">96% enterprise adoption</span>
+          {" "}across ~2,000 employees at a $700B+ global institutional investor.
+        </p>
+
+        <div className="mt-6 flex items-center justify-center gap-3 animate-fade-up opacity-0 animation-delay-300">
           <span className="text-sm text-gray-500">
             Managing Director, Digital &amp; AI Enablement
           </span>
           <span className="text-gray-700">|</span>
           <span className="text-sm text-gray-500">CPP Investments</span>
+        </div>
+
+        {/* CTA */}
+        <div className="mt-10 flex items-center justify-center gap-6 animate-fade-up opacity-0 animation-delay-400">
+          <Link
+            href="/essays"
+            className="text-sm text-white border border-navy-700 hover:border-gold px-6 py-3 tracking-wide uppercase transition-colors"
+          >
+            Read the Essays
+          </Link>
+          <Link
+            href="#contact"
+            className="text-sm text-gold hover:text-gold-light px-6 py-3 tracking-wide uppercase transition-colors"
+          >
+            Get in Touch
+          </Link>
         </div>
 
         {/* Scroll indicator */}

@@ -11,7 +11,7 @@ export default function Footer() {
               AI Enablement Architect
             </p>
           </div>
-          <div className="flex gap-8">
+          <div className="flex flex-wrap gap-8">
             <Link
               href="/essays"
               className="text-sm text-gray-500 hover:text-gray-300 transition-colors"
@@ -24,6 +24,12 @@ export default function Footer() {
             >
               Third Take
             </Link>
+            <a
+              href="mailto:ryan.michael.kaufman@gmail.com"
+              className="text-sm text-gray-500 hover:text-gray-300 transition-colors"
+            >
+              Email
+            </a>
             <a
               href="https://www.linkedin.com/in/rkaufman2/"
               target="_blank"

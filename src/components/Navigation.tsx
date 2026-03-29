@@ -1,10 +1,22 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  const links = [
+    { href: "/#about", label: "About", match: "" },
+    { href: "/essays", label: "Essays", match: "/essays" },
+    { href: "/third-take", label: "Third Take", match: "/third-take" },
+    { href: "/#contact", label: "Contact", match: "" },
+  ];
+
+  const isActive = (match: string) =>
+    match && pathname.startsWith(match);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-navy-950/90 backdrop-blur-md border-b border-navy-700/50">
@@ -19,24 +31,19 @@ export default function Navigation() {
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-8">
-            <Link
-              href="/#about"
-              className="text-sm text-gray-400 hover:text-white transition-colors tracking-wide uppercase"
-            >
-              About
-            </Link>
-            <Link
-              href="/essays"
-              className="text-sm text-gray-400 hover:text-white transition-colors tracking-wide uppercase"
-            >
-              Essays
-            </Link>
-            <Link
-              href="/third-take"
-              className="text-sm text-gray-400 hover:text-white transition-colors tracking-wide uppercase"
-            >
-              Third Take
-            </Link>
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`text-sm tracking-wide uppercase transition-colors ${
+                  isActive(link.match)
+                    ? "text-gold"
+                    : "text-gray-400 hover:text-white"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
 
           {/* Mobile toggle */}
@@ -74,27 +81,20 @@ export default function Navigation() {
         {isOpen && (
           <div className="md:hidden pb-4 border-t border-navy-700/50 pt-4">
             <div className="flex flex-col gap-4">
-              <Link
-                href="/#about"
-                onClick={() => setIsOpen(false)}
-                className="text-sm text-gray-400 hover:text-white transition-colors tracking-wide uppercase"
-              >
-                About
-              </Link>
-              <Link
-                href="/essays"
-                onClick={() => setIsOpen(false)}
-                className="text-sm text-gray-400 hover:text-white transition-colors tracking-wide uppercase"
-              >
-                Essays
-              </Link>
-              <Link
-                href="/third-take"
-                onClick={() => setIsOpen(false)}
-                className="text-sm text-gray-400 hover:text-white transition-colors tracking-wide uppercase"
-              >
-                Third Take
-              </Link>
+              {links.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className={`text-sm tracking-wide uppercase transition-colors ${
+                    isActive(link.match)
+                      ? "text-gold"
+                      : "text-gray-400 hover:text-white"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
           </div>
         )}

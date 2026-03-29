@@ -42,6 +42,24 @@ export default function ThirdTakePage() {
             </div>
           ))}
         </div>
+
+        {/* Subscribe CTA */}
+        <div className="mt-16 p-8 md:p-12 border border-navy-700/30 text-center">
+          <h3 className="font-serif text-2xl font-bold text-white mb-3">
+            Don&apos;t miss an edition.
+          </h3>
+          <p className="text-gray-400 mb-6 max-w-xl mx-auto">
+            Get Third Take delivered to your inbox every week — the AI
+            developments that matter, analyzed through the lens of enterprise
+            adoption.
+          </p>
+          <a
+            href="mailto:ryan.michael.kaufman@gmail.com?subject=Subscribe%20to%20Third%20Take"
+            className="inline-block text-sm text-white border border-navy-700 hover:border-gold px-8 py-3 tracking-wide uppercase transition-colors"
+          >
+            Subscribe
+          </a>
+        </div>
       </div>
     </div>
   );
