@@ -19,12 +19,12 @@ export default function EssaysPage() {
             Essays
           </p>
           <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Thought Leadership
+            Frameworks &amp; Essays
           </h1>
           <p className="text-gray-400 text-lg leading-relaxed">
-            On AI enablement architecture, organizational transformation, and
-            what it actually takes to move enterprises from experimentation to
-            scaled adoption.
+            Mental models, diagnostic frameworks, and design thinking principles
+            for organizational AI transformation — written to be applied, not
+            just read.
           </p>
         </div>
 

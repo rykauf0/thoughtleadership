@@ -4,13 +4,13 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Ryan Kaufman — AI Enablement Architect",
+  title: "Ryan Kaufman — Trust as Infrastructure",
   description:
-    "I design the organizational systems that make AI adoption stick. Managing Director of Digital & AI Enablement at CPP Investments.",
+    "Frameworks and design thinking for organizational AI transformation. The organizations adopting AI fastest aren't the ones with the best technology — they're the ones that built trust first.",
   openGraph: {
-    title: "Ryan Kaufman — AI Enablement Architect",
+    title: "Ryan Kaufman — Trust as Infrastructure",
     description:
-      "I design the organizational systems that make AI adoption stick.",
+      "Frameworks and design thinking for organizational AI transformation.",
     type: "website",
   },
 };

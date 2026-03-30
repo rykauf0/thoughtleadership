@@ -5,55 +5,42 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Subtle geometric accent */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 -right-64 w-[800px] h-[800px] rounded-full border border-navy-700/20" />
-        <div className="absolute -bottom-32 -left-32 w-[600px] h-[600px] rounded-full border border-navy-700/15" />
         <div className="absolute top-1/3 left-1/4 w-px h-64 bg-gradient-to-b from-transparent via-gold/10 to-transparent" />
+        <div className="absolute bottom-1/3 right-1/4 w-px h-48 bg-gradient-to-b from-transparent via-gold/8 to-transparent" />
       </div>
 
-      <div className="relative max-w-5xl mx-auto px-6 lg:px-8 text-center">
-        <p className="font-mono text-sm text-gold tracking-widest uppercase mb-6 animate-fade-up opacity-0">
-          AI Enablement Architect
+      <div className="relative max-w-4xl mx-auto px-6 lg:px-8">
+        <p className="font-mono text-sm text-gold tracking-widest uppercase mb-8 animate-fade-up opacity-0">
+          A design thinking lens on AI transformation
         </p>
-        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] mb-8 animate-fade-up opacity-0 animation-delay-100">
-          Ryan Kaufman
-        </h1>
-        <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed animate-fade-up opacity-0 animation-delay-200 text-balance">
-          I design the organizational systems that make AI adoption stick.
-        </p>
-
-        {/* Proof point — visible in the hero */}
-        <p className="mt-6 text-sm text-gray-500 animate-fade-up opacity-0 animation-delay-300">
-          <span className="text-gold font-semibold">96% enterprise adoption</span>
-          {" "}across ~2,000 employees at a $700B+ global institutional investor.
-        </p>
-
-        <div className="mt-6 flex items-center justify-center gap-3 animate-fade-up opacity-0 animation-delay-300">
-          <span className="text-sm text-gray-500">
-            Managing Director, Digital &amp; AI Enablement
+        <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-8 animate-fade-up opacity-0 animation-delay-100">
+          The organizations adopting AI fastest aren&apos;t the ones with the
+          best technology.{" "}
+          <span className="text-gold">
+            They&apos;re the ones that built trust first.
           </span>
-          <span className="text-gray-700">|</span>
-          <span className="text-sm text-gray-500">CPP Investments</span>
-        </div>
+        </h1>
+        <p className="text-lg md:text-xl text-gray-400 max-w-3xl leading-relaxed animate-fade-up opacity-0 animation-delay-200">
+          Most enterprise AI programs fail because they treat transformation as
+          a technology deployment problem. It&apos;s not. It&apos;s a trust
+          problem — and trust is a design problem. This site explores the
+          frameworks, mental models, and design thinking principles that make
+          organizational AI adoption actually work.
+        </p>
 
-        {/* CTA */}
-        <div className="mt-10 flex items-center justify-center gap-6 animate-fade-up opacity-0 animation-delay-400">
+        <div className="mt-10 flex flex-wrap items-center gap-6 animate-fade-up opacity-0 animation-delay-300">
           <Link
             href="/essays"
             className="text-sm text-white border border-navy-700 hover:border-gold px-6 py-3 tracking-wide uppercase transition-colors"
           >
-            Read the Essays
+            Explore the Frameworks
           </Link>
           <Link
-            href="#contact"
-            className="text-sm text-gold hover:text-gold-light px-6 py-3 tracking-wide uppercase transition-colors"
+            href="#lens"
+            className="text-sm text-gray-400 hover:text-gold tracking-wide uppercase transition-colors"
           >
-            Get in Touch
+            How I think about this &darr;
           </Link>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-fade-up opacity-0 animation-delay-400">
-          <div className="w-px h-16 bg-gradient-to-b from-gold/40 to-transparent mx-auto" />
         </div>
       </div>
     </section>

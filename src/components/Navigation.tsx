@@ -9,14 +9,13 @@ export default function Navigation() {
   const pathname = usePathname();
 
   const links = [
-    { href: "/#about", label: "About", match: "" },
+    { href: "/#lens", label: "The Lens", match: "" },
     { href: "/essays", label: "Essays", match: "/essays" },
     { href: "/third-take", label: "Third Take", match: "/third-take" },
     { href: "/#contact", label: "Contact", match: "" },
   ];
 
-  const isActive = (match: string) =>
-    match && pathname.startsWith(match);
+  const isActive = (match: string) => match && pathname.startsWith(match);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-navy-950/90 backdrop-blur-md border-b border-navy-700/50">

@@ -1,89 +1,71 @@
-const pillars = [
+const lenses = [
   {
     number: "01",
-    title: "Broad-Base Activation",
-    subtitle: "Enterprise Hackathons",
+    title: "Empathy Before Architecture",
     description:
-      "All-company and targeted hackathons that lift AI confidence and generate hundreds of solutions — with governed pathways from prototype to production.",
+      "Every failed AI program I've studied started with the technology and worked backward to the human. Design thinking inverts this: start with the employee who's afraid their job is changing, the manager who doesn't know what to reinforce, the executive who can't distinguish signal from vendor noise. Understand the human system first. Then design the intervention.",
   },
   {
     number: "02",
-    title: "Deep-Skill Intensives",
-    subtitle: "AI Problem-Solving Sprints",
+    title: "Reframe the Problem",
     description:
-      "Week-long immersive sprints with 1:1 expert coaching, where high-performers solve real business challenges and build AI-native capability.",
+      "\"We need AI training\" is almost always the wrong problem statement. The real problem is usually: \"Our organizational environment doesn't support new ways of working.\" Training addresses a skill gap. But most people aren't blocked by skill — they're blocked by ambiguity, risk aversion, unchanged incentives, and absent permission. Reframing the problem changes everything about the solution.",
   },
   {
     number: "03",
-    title: "Leadership Alignment",
-    subtitle: "Council + Executive Coaching",
+    title: "Trust as Infrastructure",
     description:
-      "A cross-business enablement council and 1:1 executive coaching — the connective tissue that links functions horizontally and levels vertically.",
+      "Governance isn't a brake. Clear boundaries, responsible AI frameworks, and explicit permission structures are the trust infrastructure that lets people move faster, not slower. When people know what's safe, what's endorsed, and what the path from prototype to production looks like — they stop hesitating and start building. Trust is the unlocking mechanism.",
   },
   {
     number: "04",
-    title: "Scaling Pathways",
-    subtitle: "Governance & Vendor Ecosystem",
+    title: "Systems, Not Programs",
     description:
-      "End-to-end product lifecycle governance connecting AI products, vendor partnerships, and Responsible AI guardrails to scale what works.",
+      "Point solutions produce point results. A hackathon without follow-through is theater. Training without environmental change decays in weeks. The interventions that sustain behavioral change are interlocking systems — where each component creates the conditions for the next to succeed. Design the system. Not the program.",
   },
 ];
 
 export default function Pillars() {
   return (
-    <section className="py-24 border-t border-navy-700/30">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="lens" className="py-24 border-t border-navy-700/30 scroll-mt-20">
+      <div className="max-w-5xl mx-auto px-6 lg:px-8">
         <div className="max-w-3xl mb-16">
           <p className="font-mono text-sm text-gold tracking-widest uppercase mb-4">
-            The Enablement Model
+            The Lens
           </p>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-white leading-tight mb-4">
-            Four Interlocking Pillars
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-white leading-tight mb-6">
+            Design thinking applied to organizational transformation
           </h2>
           <p className="text-gray-400 text-lg leading-relaxed">
-            Each built from zero, without existing precedent — designed to create
-            reinforcing loops of awareness, capability, leadership alignment, and
-            scale.
+            These aren&apos;t abstract principles. They&apos;re the mental
+            models I use to diagnose why AI programs stall, design interventions
+            that produce behavioral change, and build the organizational
+            infrastructure that makes adoption sustain.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-navy-700/30">
-          {pillars.map((pillar) => (
+        <div className="space-y-px bg-navy-700/20">
+          {lenses.map((lens) => (
             <div
-              key={pillar.number}
-              className="bg-navy-950 p-8 group hover:bg-navy-900/50 transition-colors"
+              key={lens.number}
+              className="bg-navy-950 p-8 md:p-10 group"
             >
-              <span className="font-mono text-sm text-gold/60 mb-4 block">
-                {pillar.number}
-              </span>
-              <h3 className="font-serif text-xl font-bold text-white mb-1">
-                {pillar.title}
-              </h3>
-              <p className="font-mono text-xs text-gold tracking-wide uppercase mb-4">
-                {pillar.subtitle}
-              </p>
-              <p className="text-sm text-gray-400 leading-relaxed">
-                {pillar.description}
-              </p>
+              <div className="flex gap-6 md:gap-10">
+                <span className="font-mono text-sm text-gold/40 pt-1 shrink-0">
+                  {lens.number}
+                </span>
+                <div>
+                  <h3 className="font-serif text-xl md:text-2xl font-bold text-white mb-4">
+                    {lens.title}
+                  </h3>
+                  <p className="text-gray-400 leading-relaxed text-base md:text-lg">
+                    {lens.description}
+                  </p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
-
-        {/* Connecting line visual */}
-        <div className="hidden lg:flex items-center justify-center mt-8">
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 rounded-full bg-gold/30" />
-            <div className="w-48 h-px bg-gradient-to-r from-gold/30 via-gold/10 to-gold/30" />
-            <div className="w-2 h-2 rounded-full bg-gold/30" />
-            <div className="w-48 h-px bg-gradient-to-r from-gold/30 via-gold/10 to-gold/30" />
-            <div className="w-2 h-2 rounded-full bg-gold/30" />
-            <div className="w-48 h-px bg-gradient-to-r from-gold/30 via-gold/10 to-gold/30" />
-            <div className="w-2 h-2 rounded-full bg-gold/30" />
-          </div>
-        </div>
-        <p className="hidden lg:block text-center text-xs text-gray-600 mt-3 tracking-wide uppercase">
-          Interlocking &mdash; not siloed
-        </p>
       </div>
     </section>
   );

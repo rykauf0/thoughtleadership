@@ -17,6 +17,7 @@ export interface ThirdTake extends ThirdTakeMeta {
 }
 
 export function getAllThirdTakes(): ThirdTakeMeta[] {
+  if (!fs.existsSync(contentDirectory)) return [];
   const files = fs.readdirSync(contentDirectory);
   const takes = files
     .filter((file) => file.endsWith(".mdx"))
