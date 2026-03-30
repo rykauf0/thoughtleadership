@@ -4,8 +4,14 @@ import EssayCard from "@/components/EssayCard";
 import Link from "next/link";
 import { getAllEssays } from "@/lib/essays";
 
+const frameworkSlugs = new Set([
+  "the-leverage-inversion",
+  "orientation-debt",
+  "the-trust-stack",
+]);
+
 export default function Home() {
-  const essays = getAllEssays().slice(0, 5);
+  const essays = getAllEssays().filter((e) => !frameworkSlugs.has(e.slug));
 
   return (
     <>
@@ -32,7 +38,7 @@ export default function Home() {
                 Essays
               </p>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-900">
-                Where Organizations Misread Leverage
+                The Human Side of Transformation
               </h2>
             </div>
           </div>
@@ -53,7 +59,7 @@ export default function Home() {
             href="/essays"
             className="text-sm font-medium text-accent hover:text-accent-dark transition-colors mt-8 block"
           >
-            All essays &rarr;
+            All essays &amp; frameworks &rarr;
           </Link>
         </div>
       </section>
