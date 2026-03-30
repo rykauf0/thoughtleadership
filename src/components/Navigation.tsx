@@ -9,7 +9,7 @@ export default function Navigation() {
   const pathname = usePathname();
 
   const links = [
-    { href: "/#frameworks", label: "Frameworks", match: "" },
+    { href: "/#arguments", label: "Ideas", match: "" },
     { href: "/essays", label: "Essays", match: "/essays" },
     { href: "/third-take", label: "Third Take", match: "/third-take" },
   ];

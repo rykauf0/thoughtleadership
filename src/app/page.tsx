@@ -59,7 +59,7 @@ export default function Home() {
             href="/essays"
             className="text-sm font-medium text-accent hover:text-accent-dark transition-colors mt-8 block"
           >
-            All essays &amp; frameworks &rarr;
+            All essays &rarr;
           </Link>
         </div>
       </section>
@@ -79,9 +79,9 @@ export default function Home() {
             Third Take
           </h2>
           <p className="text-slate-600 leading-relaxed mb-8">
-            A weekly briefing on the AI developments that matter — analyzed
-            through the lens of leverage, orientation, and trust. Not what
-            happened. What it means.
+            A weekly briefing on the AI developments that matter — what
+            actually changed, who it affects, and what the strategy deck
+            won&apos;t tell you. Not what happened. What it means.
           </p>
           <a
             href="mailto:ryan.michael.kaufman@gmail.com?subject=Subscribe%20to%20Third%20Take"
@@ -104,24 +104,22 @@ export default function Home() {
             About
           </p>
           <h2 className="font-serif text-2xl md:text-3xl font-bold text-slate-900 mb-6 leading-snug">
-            These frameworks come from building AI enablement at enterprise
-            scale — not advising on it.
+            I build AI enablement at enterprise scale — not advise on it.
           </h2>
           <div className="text-slate-600 leading-relaxed space-y-4 text-[15px]">
             <p>
-              I lead AI enablement at one of the world&apos;s largest
-              institutional investors, where I designed and built the
-              organization&apos;s entire approach to AI adoption from scratch.
-              My background spans digital product management, data and
-              analytics, MIT design thinking methodology, and organizational
-              change management.
+              I lead Digital &amp; AI Enablement at one of the world&apos;s
+              largest institutional investors. I designed and built the
+              organization&apos;s entire approach to AI adoption — from
+              governance architecture to the behavioral change that makes
+              it stick. Before that: digital product management, data
+              strategy, and organizational change.
             </p>
             <p>
-              The frameworks on this site are drawn from that work — from
-              navigating the gap between what organizations say they want
-              from AI and what they&apos;re actually willing to change to get
-              it. I write about the human systems that make transformation
-              stick, because that&apos;s the part nobody talks about honestly.
+              I write about the gap between what organizations say they
+              want from AI and what they&apos;re actually willing to change
+              to get it. The technology is the easy part. The hard part is
+              everything else.
             </p>
           </div>
           <div className="mt-8 flex gap-4">

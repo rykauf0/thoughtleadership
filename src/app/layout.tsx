@@ -4,13 +4,13 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Ryan Kaufman — Frameworks for AI Transformation",
+  title: "Ryan Kaufman — AI Transformation, Honestly",
   description:
-    "Design thinking frameworks for organizational AI transformation. Where human judgment meets systemic change.",
+    "Why most enterprise AI programs fail — and what the evidence says about fixing them. Writing on organizational change, human judgment, and the real barriers to AI adoption.",
   openGraph: {
-    title: "Ryan Kaufman — Frameworks for AI Transformation",
+    title: "Ryan Kaufman — AI Transformation, Honestly",
     description:
-      "Design thinking frameworks for organizational AI transformation.",
+      "Why most enterprise AI programs fail — and what the evidence says about fixing them.",
     type: "website",
   },
 };
