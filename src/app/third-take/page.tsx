@@ -8,42 +8,40 @@ export const metadata: Metadata = {
 
 export default function ThirdTakePage() {
   return (
-    <div className="pt-24 pb-16">
-      <div className="max-w-3xl mx-auto px-6 lg:px-8 pt-16 text-center">
-        <p className="font-mono text-sm text-gold tracking-widest uppercase mb-4">
+    <div className="pt-12 pb-20">
+      <div className="max-w-2xl mx-auto px-6 pt-16">
+        <p className="font-mono text-xs text-slate-400 tracking-widest uppercase mb-3">
           Coming Soon
         </p>
-        <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">
+        <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
           Third Take
         </h1>
-        <p className="text-gray-400 text-lg leading-relaxed mb-4">
+        <p className="text-slate-600 text-lg leading-relaxed mb-3">
           A weekly briefing on the AI developments that matter — analyzed not
           for what happened, but for what it means for the organizations trying
-          to make AI adoption real.
+          to make adoption real.
         </p>
-        <p className="text-gray-500 text-base leading-relaxed mb-4">
-          Beyond the news. Beyond the hot take. The organizational implications.
-        </p>
-        <p className="text-gray-500 text-base mb-10">
-          Three stories. One synthesis. Every week.
+        <p className="text-slate-500 leading-relaxed mb-10">
+          Three to five stories. One synthesis. The organizational implications
+          that nobody else is writing about. Every week.
         </p>
 
-        <div className="p-8 border border-navy-700/30 mb-12">
-          <h3 className="font-serif text-xl font-bold text-white mb-3">
+        <div className="bg-slate-50 border border-slate-200 rounded-lg p-6 mb-10">
+          <h3 className="font-serif text-lg font-bold text-slate-900 mb-2">
             The format
           </h3>
-          <p className="text-gray-400 text-base leading-relaxed">
-            Each edition curates 3&ndash;5 of the week&apos;s most significant
-            AI developments and analyzes them through the lens of enterprise
-            adoption, organizational design, and trust infrastructure. Not what
-            happened — what it means for someone trying to make AI work at
-            scale.
+          <p className="text-slate-600 text-[15px] leading-relaxed">
+            Each edition curates the week&apos;s most significant AI
+            developments and analyzes them through the lens of leverage,
+            orientation debt, and trust architecture. Not what the technology
+            can do — what it means for the humans and organizations trying to
+            absorb it.
           </p>
         </div>
 
         <a
           href="mailto:ryan.michael.kaufman@gmail.com?subject=Subscribe%20to%20Third%20Take"
-          className="inline-block text-sm text-white border border-navy-700 hover:border-gold px-8 py-3 tracking-wide uppercase transition-colors"
+          className="inline-block text-sm font-medium text-white bg-slate-900 hover:bg-slate-800 px-5 py-2.5 rounded transition-colors"
         >
           Get Notified at Launch
         </a>

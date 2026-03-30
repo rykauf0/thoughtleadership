@@ -9,8 +9,7 @@ interface Props {
 }
 
 export function generateStaticParams() {
-  const essays = getAllEssays();
-  return essays.map((essay) => ({ slug: essay.slug }));
+  return getAllEssays().map((essay) => ({ slug: essay.slug }));
 }
 
 export function generateMetadata({ params }: Props): Metadata {
@@ -27,39 +26,40 @@ export default function EssayPage({ params }: Props) {
   if (!essay) notFound();
 
   return (
-    <div className="pt-24 pb-16">
-      <div className="max-w-reading mx-auto px-6 lg:px-8 pt-8">
+    <div className="pt-12 pb-20">
+      <div className="max-w-reading mx-auto px-6 pt-8">
         <Link
           href="/essays"
-          className="font-mono text-sm text-gray-500 hover:text-gold transition-colors mb-8 block"
+          className="text-sm text-slate-400 hover:text-slate-900 transition-colors mb-10 block"
         >
-          &larr; Back to Essays
+          &larr; Essays
         </Link>
 
         <header className="mb-12">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="font-mono text-xs text-gold tracking-wide uppercase">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="text-xs font-medium text-accent uppercase tracking-wide">
               {essay.category}
             </span>
-            <span className="text-navy-700">|</span>
-            <span className="font-mono text-xs text-gray-500">
-              {essay.readTime}
-            </span>
+            <span className="text-slate-300">&middot;</span>
+            <span className="text-xs text-slate-400">{essay.readTime}</span>
           </div>
-          <h1 className="font-serif text-3xl md:text-5xl font-bold text-white leading-tight mb-4">
+          <h1 className="font-serif text-3xl md:text-[2.75rem] md:leading-[1.15] font-bold text-slate-900 mb-4">
             {essay.title}
           </h1>
-          <time className="font-mono text-sm text-gray-500">{essay.date}</time>
+          <p className="text-slate-500 text-lg leading-relaxed mb-4">
+            {essay.summary}
+          </p>
+          <time className="text-xs text-slate-400">{essay.date}</time>
         </header>
 
         <article>
           <MDXContent source={essay.content} />
         </article>
 
-        <footer className="mt-16 pt-8 border-t border-navy-700/30">
+        <footer className="mt-16 pt-8 border-t border-slate-200">
           <Link
             href="/essays"
-            className="font-mono text-sm text-gray-500 hover:text-gold transition-colors"
+            className="text-sm text-slate-400 hover:text-slate-900 transition-colors"
           >
             &larr; Back to Essays
           </Link>

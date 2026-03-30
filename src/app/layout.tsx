@@ -4,13 +4,13 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Ryan Kaufman — Trust as Infrastructure",
+  title: "Ryan Kaufman — Frameworks for AI Transformation",
   description:
-    "Frameworks and design thinking for organizational AI transformation. The organizations adopting AI fastest aren't the ones with the best technology — they're the ones that built trust first.",
+    "Design thinking frameworks for organizational AI transformation. Where human judgment meets systemic change.",
   openGraph: {
-    title: "Ryan Kaufman — Trust as Infrastructure",
+    title: "Ryan Kaufman — Frameworks for AI Transformation",
     description:
-      "Frameworks and design thinking for organizational AI transformation.",
+      "Design thinking frameworks for organizational AI transformation.",
     type: "website",
   },
 };
@@ -30,11 +30,11 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body className="font-sans">
+      <body className="font-sans antialiased">
         <Navigation />
         <main>{children}</main>
         <Footer />

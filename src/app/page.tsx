@@ -1,136 +1,135 @@
 import Hero from "@/components/Hero";
-import Pillars from "@/components/Pillars";
+import Frameworks from "@/components/Frameworks";
 import EssayCard from "@/components/EssayCard";
 import Link from "next/link";
 import { getAllEssays } from "@/lib/essays";
 
 export default function Home() {
-  const essays = getAllEssays().slice(0, 3);
+  const essays = getAllEssays().slice(0, 5);
 
   return (
     <>
       <Hero />
 
-      <Pillars />
+      {/* Divider */}
+      <div className="max-w-6xl mx-auto px-6">
+        <hr className="border-slate-200" />
+      </div>
 
-      {/* Central thesis */}
-      <section className="py-24 border-t border-navy-700/30">
-        <div className="max-w-3xl mx-auto px-6 lg:px-8">
-          <blockquote className="border-l-2 border-gold pl-8">
-            <p className="font-serif text-2xl md:text-3xl text-white leading-snug mb-6">
-              &ldquo;The organizations that will capture the most value from AI
-              are the ones that treat trust — not technology — as their primary
-              infrastructure investment.&rdquo;
-            </p>
-          </blockquote>
-          <p className="text-gray-400 text-lg leading-relaxed mt-8">
-            This isn&apos;t a theory. I&apos;ve built and led the AI enablement
-            architecture at one of the world&apos;s largest institutional
-            investors — designing every major intervention from scratch, without
-            precedent. The frameworks on this site come from that work: what
-            it actually takes to move an enterprise from &ldquo;we have AI
-            tools&rdquo; to &ldquo;AI has changed how we work.&rdquo;
-          </p>
-          <p className="text-gray-500 text-base mt-4">
-            My background spans digital product management, data and analytics,
-            MIT design thinking methodology, and organizational change — the
-            combination that makes it possible to see AI transformation as a
-            human systems problem, not a technology deployment problem.
-          </p>
-        </div>
-      </section>
+      <Frameworks />
+
+      {/* Divider */}
+      <div className="max-w-6xl mx-auto px-6">
+        <hr className="border-slate-200" />
+      </div>
 
       {/* Essays */}
-      <section className="py-24 border-t border-navy-700/30">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex items-end justify-between mb-12">
+      <section className="py-20 md:py-28">
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="flex items-end justify-between mb-10">
             <div>
-              <p className="font-mono text-sm text-gold tracking-widest uppercase mb-4">
-                Frameworks &amp; Essays
+              <p className="font-mono text-xs text-slate-400 tracking-widest uppercase mb-3">
+                Essays
               </p>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-white">
-                Thinking in Public
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-900">
+                Where Organizations Misread Leverage
               </h2>
             </div>
-            <Link
-              href="/essays"
-              className="text-sm text-gray-400 hover:text-gold transition-colors hidden md:block"
-            >
-              View all &rarr;
-            </Link>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-px bg-navy-700/20">
+          <div className="divide-y divide-slate-200">
             {essays.map((essay) => (
-              <div key={essay.slug} className="bg-navy-950">
-                <EssayCard
-                  slug={essay.slug}
-                  title={essay.title}
-                  summary={essay.summary}
-                  date={essay.date}
-                  readTime={essay.readTime}
-                  category={essay.category}
-                />
-              </div>
+              <EssayCard
+                key={essay.slug}
+                slug={essay.slug}
+                title={essay.title}
+                summary={essay.summary}
+                date={essay.date}
+                readTime={essay.readTime}
+                category={essay.category}
+              />
             ))}
           </div>
           <Link
             href="/essays"
-            className="text-sm text-gray-400 hover:text-gold transition-colors mt-8 block md:hidden"
+            className="text-sm font-medium text-accent hover:text-accent-dark transition-colors mt-8 block"
           >
-            View all essays &rarr;
+            All essays &rarr;
           </Link>
         </div>
       </section>
 
-      {/* Third Take — coming soon */}
-      <section className="py-24 border-t border-navy-700/30">
-        <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
-          <p className="font-mono text-sm text-gold tracking-widest uppercase mb-4">
+      {/* Divider */}
+      <div className="max-w-6xl mx-auto px-6">
+        <hr className="border-slate-200" />
+      </div>
+
+      {/* Third Take teaser */}
+      <section className="py-20 md:py-28">
+        <div className="max-w-2xl mx-auto px-6 text-center">
+          <p className="font-mono text-xs text-slate-400 tracking-widest uppercase mb-3">
             Coming Soon
           </p>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-900 mb-4">
             Third Take
           </h2>
-          <p className="text-gray-400 text-lg leading-relaxed mb-4">
-            A weekly briefing on the AI developments that matter — analyzed not
-            for what happened, but for what it means for the organizations
-            trying to make AI adoption real. Beyond the news. Beyond the hot
-            take. The organizational implications.
-          </p>
-          <p className="text-gray-500 text-base mb-8">
-            Three stories. One synthesis. Every week.
+          <p className="text-slate-600 leading-relaxed mb-8">
+            A weekly briefing on the AI developments that matter — analyzed
+            through the lens of leverage, orientation, and trust. Not what
+            happened. What it means.
           </p>
           <a
             href="mailto:ryan.michael.kaufman@gmail.com?subject=Subscribe%20to%20Third%20Take"
-            className="inline-block text-sm text-white border border-navy-700 hover:border-gold px-8 py-3 tracking-wide uppercase transition-colors"
+            className="inline-block text-sm font-medium text-white bg-slate-900 hover:bg-slate-800 px-5 py-2.5 rounded transition-colors"
           >
             Get Notified at Launch
           </a>
         </div>
       </section>
 
-      {/* Contact — minimal */}
-      <section id="contact" className="py-24 border-t border-navy-700/30 scroll-mt-20">
-        <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-2xl md:text-3xl font-bold text-white mb-6">
-            If these ideas resonate, let&apos;s talk.
-          </h2>
-          <p className="text-gray-400 text-base leading-relaxed mb-8">
-            I work with executive teams navigating the shift from AI
-            experimentation to organizational transformation.
+      {/* Divider */}
+      <div className="max-w-6xl mx-auto px-6">
+        <hr className="border-slate-200" />
+      </div>
+
+      {/* About — minimal, at the bottom */}
+      <section className="py-20 md:py-28">
+        <div className="max-w-2xl mx-auto px-6">
+          <p className="font-mono text-xs text-slate-400 tracking-widest uppercase mb-3">
+            About
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <h2 className="font-serif text-2xl md:text-3xl font-bold text-slate-900 mb-6 leading-snug">
+            These frameworks come from building AI enablement at enterprise
+            scale — not advising on it.
+          </h2>
+          <div className="text-slate-600 leading-relaxed space-y-4 text-[15px]">
+            <p>
+              I lead AI enablement at one of the world&apos;s largest
+              institutional investors, where I designed and built the
+              organization&apos;s entire approach to AI adoption from scratch.
+              My background spans digital product management, data and
+              analytics, MIT design thinking methodology, and organizational
+              change management.
+            </p>
+            <p>
+              The frameworks on this site are drawn from that work — from
+              navigating the gap between what organizations say they want
+              from AI and what they&apos;re actually willing to change to get
+              it. I write about the human systems that make transformation
+              stick, because that&apos;s the part nobody talks about honestly.
+            </p>
+          </div>
+          <div className="mt-8 flex gap-4">
             <a
               href="mailto:ryan.michael.kaufman@gmail.com"
-              className="text-sm text-white border border-navy-700 hover:border-gold px-8 py-3 tracking-wide uppercase transition-colors"
+              className="text-sm font-medium text-accent hover:text-accent-dark transition-colors"
             >
-              Get in Touch
+              Get in touch
             </a>
             <a
               href="https://www.linkedin.com/in/rkaufman2/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-gray-400 hover:text-gold px-8 py-3 tracking-wide uppercase transition-colors"
+              className="text-sm text-slate-400 hover:text-slate-900 transition-colors"
             >
               LinkedIn
             </a>

@@ -9,16 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        navy: {
-          950: "#0A0F1C",
-          900: "#111827",
-          800: "#1F2937",
-          700: "#374151",
-        },
-        gold: {
-          DEFAULT: "#D4A853",
-          light: "#E5BE7D",
-          dark: "#B8913A",
+        accent: {
+          DEFAULT: "#2563EB",
+          light: "#3B82F6",
+          dark: "#1D4ED8",
+          muted: "#DBEAFE",
         },
       },
       fontFamily: {
@@ -27,14 +22,8 @@ const config: Config = {
         mono: ["'IBM Plex Mono'", "monospace"],
       },
       maxWidth: {
-        reading: "720px",
-      },
-      typography: {
-        DEFAULT: {
-          css: {
-            maxWidth: "720px",
-          },
-        },
+        reading: "70ch",
+        content: "48rem",
       },
     },
   },

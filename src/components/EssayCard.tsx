@@ -18,20 +18,20 @@ export default function EssayCard({
   category,
 }: EssayCardProps) {
   return (
-    <Link href={`/essays/${slug}`} className="group block">
-      <article className="p-8 border border-navy-700/30 hover:border-navy-700/60 bg-navy-900/30 hover:bg-navy-900/50 transition-all">
-        <div className="flex items-center gap-3 mb-4">
-          <span className="font-mono text-xs text-gold tracking-wide uppercase">
+    <Link href={`/essays/${slug}`} className="group block py-8 first:pt-0 last:pb-0">
+      <article>
+        <div className="flex items-center gap-2 mb-3">
+          <span className="text-xs font-medium text-accent uppercase tracking-wide">
             {category}
           </span>
-          <span className="text-navy-700">|</span>
-          <span className="font-mono text-xs text-gray-500">{readTime}</span>
+          <span className="text-slate-300">&middot;</span>
+          <span className="text-xs text-slate-400">{readTime}</span>
         </div>
-        <h3 className="font-serif text-xl md:text-2xl font-bold text-white group-hover:text-gold transition-colors mb-3 leading-snug">
+        <h3 className="font-serif text-xl md:text-2xl font-bold text-slate-900 group-hover:text-accent transition-colors mb-2 leading-snug">
           {title}
         </h3>
-        <p className="text-gray-400 leading-relaxed mb-4">{summary}</p>
-        <time className="font-mono text-xs text-gray-600">{date}</time>
+        <p className="text-slate-600 leading-relaxed mb-3 text-[15px]">{summary}</p>
+        <time className="text-xs text-slate-400">{date}</time>
       </article>
     </Link>
   );
