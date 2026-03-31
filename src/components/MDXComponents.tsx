@@ -1,4 +1,13 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
+import {
+  JudgmentPipeline,
+  MeasurementLayers,
+  CopilotComparison,
+  RatchetCycle,
+  GovernanceGap,
+  ComplexityComparison,
+  AnxietyBalance,
+} from "./Diagrams";
 
 const components = {
   h1: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
@@ -49,6 +58,13 @@ const components = {
   td: (props: React.HTMLAttributes<HTMLTableCellElement>) => (
     <td className="py-3 pr-4 text-slate-600 border-b border-slate-100" {...props} />
   ),
+  JudgmentPipeline,
+  MeasurementLayers,
+  CopilotComparison,
+  RatchetCycle,
+  GovernanceGap,
+  ComplexityComparison,
+  AnxietyBalance,
 };
 
 interface MDXContentProps {
